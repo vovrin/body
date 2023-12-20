@@ -194,7 +194,7 @@ article .infohead, article .infobody, article .infohand, article .infolegs {
 }
 .testh .test .nervov {
   width: 35vw;
-  border-radius: 14px;
+  border-radius: 10px;
 }
 .testh .test .variaty {
   display: flex;
