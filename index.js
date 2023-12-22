@@ -218,11 +218,13 @@ $("#nerv").click(function(){
     $("#nerv").css({"background-color":"green"})
 })
 $("#shy, #conf, #sad").click(function(){
+    window.navigator.vibrate([200, 100]);
     win--;
     $("#sad, #shy, #conf").css({"background-color":"red", "animation":"fals .5s"})
     $("#nerv").css({"background-color":"green"})
 })
 $("#shy1, #conf1, #nerv1").click(function(){
+    window.navigator.vibrate([200, 100]);
     win--;
     if (win == 2){
         $(".win").css({"display":"flex"})
@@ -234,17 +236,7 @@ $("#shy1, #conf1, #nerv1").click(function(){
     $("#sad1").css({"background-color":"green"})
 })
 $("#sad1").click(function(){
-    navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
-    .then(device => {
-      // Читаемое имя устройства.
-      console.log(device.name);
     
-      // Попытка соединиться с удаленным сервером GATT.
-      return device.gatt.connect();
-    })
-    .then(server => { /* … */ })
-    .catch(error => { console.error(error); });
-    win++;
     if (win == 2){
         $(".win").css({"display":"flex"})
       
